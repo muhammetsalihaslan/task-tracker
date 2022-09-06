@@ -1,8 +1,13 @@
+import Header from "../components/Header";
+import ShowTasks from "../components/ShowTasks";
 
 
 const Home = () => {
     return(
-        <div></div>
+        <div>
+            <Header/>
+            <ShowTasks/>
+        </div>
     );
 };
 
