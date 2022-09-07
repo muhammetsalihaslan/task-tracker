@@ -42,3 +42,16 @@
     background-color: purple;
     margin:2rem 0;
 }
+.st{
+    text-align: center;
+}
+
+.show{
+    width: 50%;
+    height:30px;
+    padding:1rem;
+    font-size:1rem;
+    border-radius: 5px;
+    
+
+}
