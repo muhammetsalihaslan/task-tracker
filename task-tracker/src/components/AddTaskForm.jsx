@@ -1,11 +1,24 @@
 import { useState } from "react";
 
 
-const AddTaskForm = () => {
+const AddTaskForm = ({tasks, setTasks}) => {
     const [task, setTask] = useState('');
     const [day, setDay] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const id = new Date().getTime();
+        const newTask = {id : id, task: task, day:day, isDone:false};
+        setTasks([...tasks, newTask]);
+        setTask('');
+        setDay('')
+    }
+    
+
+
+
     return (
-        <form>
+        <form onSubmit={handleSubmit} >
          <div className="form-control" >
             <label htmlFor="task">Task</label>
             <input 
